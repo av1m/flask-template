@@ -2,6 +2,7 @@ help: ## Display callable targets.
 	@egrep -h '\s##\s' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 install: ## Install the environment
+	rsync -u app/.env.example app/.env
 	python3 -m venv .venv
 	.venv/bin/python3 -m pip install --upgrade pip wheel setuptools
 	.venv/bin/python3 -m pip install --upgrade -r requirements.txt
