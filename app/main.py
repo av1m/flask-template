@@ -1,8 +1,8 @@
 """Main app"""
 
 from flask import Blueprint, jsonify
-from app.config import get_config as config
 
+from app.config import get_config as config
 
 bp: Blueprint = Blueprint(
     name="main", import_name=__name__, url_prefix="/", template_folder="templates"

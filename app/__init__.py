@@ -3,6 +3,7 @@ Create a new Flask application.
 """
 
 from flask import Flask
+
 from app.config import get_config
 from app.main import bp as main_bp
 

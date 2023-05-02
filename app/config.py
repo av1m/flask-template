@@ -10,9 +10,10 @@ Import the configuration like this :
 from app.config import get_config as config
 """
 
-from os import getenv
 from enum import Enum
+from os import getenv
 from typing import Type
+
 from dotenv import load_dotenv
 
 load_dotenv("app/.env")
@@ -37,7 +38,7 @@ class BaseConfig:
     TYPE: TypeConfig = TypeConfig.DEVELOPMENT
     FLASK_ENV: str = TYPE.value
     DEBUG: bool = False
-    TESTING: bool = False 
+    TESTING: bool = False
 
 
 class DevelopmentConfig(BaseConfig):
