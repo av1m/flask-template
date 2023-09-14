@@ -11,5 +11,5 @@ bp: Blueprint = Blueprint(
 
 @bp.route("/", methods=["GET"])
 def main_route():
-    """This is a test of the PDF generation"""
+    """This is the main (base) route of the app"""
     return jsonify({"message": f"Hello World your on {config.BASE_URL}!"})
